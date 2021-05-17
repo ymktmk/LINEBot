@@ -198,26 +198,6 @@ def lambda_handler(event, context):
                         }
 
                 elif message_event['message']['text'] == "はい":
-                    
-                    # Slackに送信
-                    
-                    # send_data = {
-                    #     "text": "氏名 : " + queryData['Items'][0]['name'] + '\n' +
-                    #           "人数 : " + queryData['Items'][0]['people'] + '\n' +
-                    #           "日付 : " + queryData['Items'][0]['reserve_date']
-                    # }
-                    
-                    # send_text = json.dumps(send_data)
-                    
-                    # request = urllib.request.Request(
-                    #     "https://hooks.slack.com/services/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", 
-                    #     data=send_text.encode('utf-8'), 
-                    #     method="POST"
-                    # )
-                    
-                    # with urllib.request.urlopen(request) as response:
-                        
-                    #     response_body = response.read().decode('utf-8')
                         
                     data = {
                         'replyToken':message_event['replyToken'],
